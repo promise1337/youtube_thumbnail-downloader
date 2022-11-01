@@ -1,0 +1,29 @@
+{
+    "name": "YTThumbnail - Downloader",
+    "version": "1.0.2",
+    "description": "A basic chrome extension to download thumbnail on youtube videos",
+    "manifest_version": 3,
+    "author": "valpo1337",
+    "action":{
+        "default_icon": "youtube.png",
+        "default_popup": "index.html",
+        "default_title": "YTThumbnail - Downloader"
+    },
+    "permissions": [
+        "tabs",
+        "scripting",
+        "notifications"
+      ],
+      "host_permissions": [
+        "https://*/*",
+        "http://*/*"
+      ],
+
+      "content_scripts": [
+        {
+          "matches": [ "https://www.youtube.com/*" ],
+          "js": ["script.js"]
+        }
+      ]
+}
+
